@@ -1,5 +1,11 @@
 package org.shijing.asrc.client;
 
+import org.shijing.asrc.client.model.BoolData;
+import org.shijing.asrc.client.model.DoubleData;
+import org.shijing.asrc.client.model.IData;
+import org.shijing.asrc.client.model.IntData;
+import org.shijing.asrc.client.model.StringData;
+
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;

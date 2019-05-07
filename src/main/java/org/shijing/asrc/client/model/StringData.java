@@ -1,4 +1,4 @@
-package org.shijing.asrc.client;
+package org.shijing.asrc.client.model;
 
 public class StringData implements IData {
     private final String value;

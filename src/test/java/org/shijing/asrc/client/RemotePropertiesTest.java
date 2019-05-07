@@ -2,9 +2,9 @@ package org.shijing.asrc.client;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import static org.shijing.asrc.client.DataDelta.DeltaType.ADDITION;
-import static org.shijing.asrc.client.DataDelta.DeltaType.DELETION;
-import static org.shijing.asrc.client.DataDelta.DeltaType.UPDATE;
+import static org.shijing.asrc.client.model.DataDelta.DeltaType.ADDITION;
+import static org.shijing.asrc.client.model.DataDelta.DeltaType.DELETION;
+import static org.shijing.asrc.client.model.DataDelta.DeltaType.UPDATE;
 import static org.shijing.asrc.client.TestModule.CONFIGS_FIXTURE;
 import static org.shijing.asrc.client.TestModule.CONFIG_BOOL_FALSE;
 import static org.shijing.asrc.client.TestModule.CONFIG_BOOL_TRUE;
@@ -28,6 +28,12 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 import org.junit.Before;
 import org.junit.Test;
+import org.shijing.asrc.client.model.BoolData;
+import org.shijing.asrc.client.model.DataDelta;
+import org.shijing.asrc.client.model.DoubleData;
+import org.shijing.asrc.client.model.IData;
+import org.shijing.asrc.client.model.IntData;
+import org.shijing.asrc.client.model.StringData;
 
 public class RemotePropertiesTest {
 

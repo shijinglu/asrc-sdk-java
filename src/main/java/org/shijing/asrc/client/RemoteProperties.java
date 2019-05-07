@@ -1,9 +1,12 @@
 package org.shijing.asrc.client;
 
 
-import static org.shijing.asrc.client.DataDelta.DeltaType.ADDITION;
-import static org.shijing.asrc.client.DataDelta.DeltaType.DELETION;
-import static org.shijing.asrc.client.DataDelta.DeltaType.UPDATE;
+import org.shijing.asrc.client.model.DataDelta;
+import org.shijing.asrc.client.model.IData;
+
+import static org.shijing.asrc.client.model.DataDelta.DeltaType.ADDITION;
+import static org.shijing.asrc.client.model.DataDelta.DeltaType.DELETION;
+import static org.shijing.asrc.client.model.DataDelta.DeltaType.UPDATE;
 
 import java.lang.ref.WeakReference;
 import java.util.Collections;

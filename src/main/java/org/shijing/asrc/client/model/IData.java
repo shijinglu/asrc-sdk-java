@@ -1,4 +1,4 @@
-package org.shijing.asrc.client;
+package org.shijing.asrc.client.model;
 
 public interface IData {
     enum DataType {
