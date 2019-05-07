@@ -1,9 +1,10 @@
 plugins {
     id 'java'
+    id 'maven-publish'
 }
 
 group 'org.shijinglu'
-version '1.0-SNAPSHOT'
+version '0.1.0'
 
 sourceCompatibility = 1.8
 
@@ -13,4 +14,36 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+// Publish to Maven Repository
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+        maven(MavenPublication) {
+            groupId = 'org.shijinglu'
+            artifactId = 'remote-properties'
+            version = "${version}"
+            from components.java
+            pom {
+                name = 'An SDK that can overrides local configuration with remote ones'
+                description = 'The Client SDK of A Simple Remote Configuration Service (ASRC)'
+                developers {
+                    developer {
+                        id = 'shijinglu'
+                        name = 'Shijing Lu'
+                        email = 'Shijing.Lu@gmail.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git@github.com:shijinglu/asrc-sdk-java.git'
+                    developerConnection = 'scm:git:ssh://github.com/shijinglu/asrc-sdk-java.git'
+                    url = 'https://github.com/shijinglu/asrc-sdk-java'
+                }
+            }
+        }
+
+    }
 }
